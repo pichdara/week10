@@ -39,6 +39,12 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('category.index') }}">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('post.index') }}">Post</a>
+                        </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -72,7 +78,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="margin-left: 15%; margin-right: 15%">
             @yield('content')
         </main>
     </div>
